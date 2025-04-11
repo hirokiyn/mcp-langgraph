@@ -1,0 +1,33 @@
+[project]
+name = "mcp-langgraph"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "mcp (>=1.6.0,<2.0.0)",
+    "langgraph (>=0.3.27,<0.4.0)",
+    "langchain (>=0.3.23,<0.4.0)",
+    "langchain-core (>=0.3.51,<0.4.0)",
+    "langchain-mcp-adapters (>=0.0.7,<0.0.8)",
+    "langchain-anthropic (>=0.3.10,<0.4.0)",
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "asyncio (>=3.4.3,<4.0.0)",
+]
+
+[tool.poetry]
+packages = [{include = "src"}]
+
+[tool.poetry.scripts]
+main = "src.main:main"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.2.0"
+black = "^25.1.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
